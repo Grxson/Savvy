@@ -4,19 +4,23 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         @stack('styles')
-        <title>Devstagram - @yield('titulo')</title>
+        
+        <title>Savvy - @yield('titulo')</title>
         @vite('resources/css/app.css')
         @vite('resources/js/app.js')
-
+        
         @livewireStyles
 
     </head>
     <body class="bg-gray-100">
         <header class="p-5 border-b bg-white shadow">
             <div class="container mx-auto flex justify-between">
-                <a
+                {{-- <a
                     href="{{ route('home') }}"
-                    class="text-3xl font-black">Devstagram</a>
+                    class="text-3xl font-black font-family-">Savvy</a> --}}
+                    <a href="/">
+                        <img src="{{ asset('img/LogoSavvy.png') }}" alt="Logo de Savvy" width="150" height="150" >
+                    </a>
 
                 @auth
                     <nav class="flex gap-2 items-center">
@@ -33,18 +37,18 @@
                         </a>
 
                         <a 
-                            class="font-bold text-gray-600 text-sm" 
+                            class="font-bold text-gray-600 text-9xl" 
                             href="{{ route('posts.index', auth()->user()->username ) }}">
-                            Hola, <span>{{ auth()->user()->name }}</span>
+                            Hola, <span>{{ auth()->user()->name }}</span> |
                         </a>
 
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <button
                                 type="submit"
-                                class="font-bold text-gray-600 text-sm" 
+                                class="font-bold text-gray-600 text-9xl" 
                                 >
-                                Cerrar sesion
+                                Cerrar Sesión
                             </button>
 
                         </form>
@@ -52,14 +56,14 @@
                 @endauth
 
                 @guest
-                    <nav class="flex gap-2 items-center">
+                    <nav class="flex gap-2 items-center " >
                         <a 
-                            class="font-bold text-gray-600 text-sm" 
-                            href="{{ route('login') }}">Login
+                            class="font-bold text-gray-600 text-9xl" 
+                            href="{{ route('login') }}">Iniciar Sesión |
                         </a>
                         <a 
-                            class="font-bold text-gray-600 text-sm" 
-                            href="{{ route('register') }}">Crear cuenta
+                            class="font-bold text-gray-600 text-9xl" 
+                            href="{{ route('register') }}">Crear Cuenta
                         </a>
                     </nav>
                 @endguest
@@ -76,7 +80,7 @@
         </main>
 
         <footer class="text-center p-5 font-bold text-gray-500 mt-10">
-            Devstagram - Todos los derechos reservados {{ now()->year }}
+            Savvy - Todos los derechos reservados {{ now()->year }}
         </footer>
 
 

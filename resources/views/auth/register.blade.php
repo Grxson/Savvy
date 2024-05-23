@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Registrate en Devstagram
+    Registrate en Savvy
 @endsection
 
 @section('contenido')
@@ -9,8 +9,8 @@
     <div class="md:flex md:justify-center md:gap-10 md:items-center">
         <div class="md:w-4/12">
             <img 
-                src="{{ asset('img/register.jpg') }}" 
-                alt="Imagen registro de usuario" >
+                src="{{ asset('img/LogoConejo.png') }}" 
+                alt="Imagen registro de usuario" width="500" height="500" >
         </div>
 
         <div class="md:w-4/12 bg-white p-6 rounded-lg shadow-xl">

@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('titulo')
-	Inicia Sesion en DevStagram
+	Inicia Sesion en Savvy
 @endsection
 
 @section('contenido')
 
 	<div class="md:flex md:justify-center md:gap-6 md:items-center">
 		<div class="md:w-5/12 p-5">
-			<img src="{{ asset('img/login.jpg') }}" alt="Imagen registrar">
+			<img src="{{ asset('img/LogoConejo.png') }}" alt="Imagen sesion" width="500" height="500">
 		</div>
 
 		<div class="md:w-4/12 bg-white p-6 rounded-lg shadow-xl">
