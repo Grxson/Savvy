@@ -1,7 +1,7 @@
 
 # Savvy 🤖
 
-Red social hecha en laravel 
+Red social creada en laravel 9
 
 
 
@@ -32,3 +32,60 @@ Red social hecha en laravel
 - Livewire
 
 - MySQL
+
+
+
+
+## Ejecutar localmente
+
+Para ejecutar localmente el proyecto: 
+
+```bash
+  composer install
+```
+
+```bash
+  cp .env.example .env
+```
+
+```bash
+  php artisan key:generate
+```
+
+```bash
+  mysql -u root -p secret
+```
+
+```bash
+  CREATE DATABASE tu_base_de_datos;
+```
+
+En el archivo .env, cambiar configuracion:
+```bash
+DB_HOST=localhost
+DB_DATABASE=tu_base_de_datos
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+```bash
+  php artisan migrate 
+```
+
+```bash
+  npm install
+```
+
+```bash
+  npm install
+```
+
+Para correr el proyecto:
+
+```bash
+  npm run dev
+```
+
+```bash
+  php artisan serve
+```
