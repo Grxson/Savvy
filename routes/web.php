@@ -36,6 +36,7 @@ Route::post('/logout', [LogoutController::class,'store'])->name('logout');
 //Rutas para el perfil
 Route::get('/editar-perfil', [PerfilController::class,'index'])->name('perfil.index');
 Route::post('/editar-perfil', [PerfilController::class,'store'])->name('perfil.store');
+Route::delete('/eliminar-perfil', [PerfilController::class, 'destroy'])->name('perfil.destroy');
 
 // Route Model binding
 Route::get('/posts/create', [PostController::class,'create'])->name('posts.create');

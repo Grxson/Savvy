@@ -49,4 +49,17 @@ class PerfilController extends Controller
         // Redireccionar
         return redirect()->route('posts.index', $usuario->username);
     }
+    public function destroy(Request $request) {
+        // Obtener el usuario autenticado
+        $usuario = User::find(auth()->user()->id);
+
+        // Eliminar al usuario
+        $usuario->delete();
+
+        // Cerrar sesión
+        auth()->logout();
+
+        // Redireccionar a la página principal
+        return redirect()->route('home')->with('status', 'Perfil eliminado correctamente');
+    }
 }
